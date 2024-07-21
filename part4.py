@@ -1,4 +1,4 @@
-def stable_matching(buyers_preferences, stocks_preferences):
+def stable_stock_matching(buyers_preferences, stocks_preferences):
     # Initialize all buyers and stocks as free
     free_buyers = list(buyers_preferences.keys())
     matched_stocks = {}
