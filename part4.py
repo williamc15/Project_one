@@ -24,18 +24,19 @@ def stable_stock_matching(buyers_preferences, stocks_preferences):
     
     return {v: k for k, v in matched_stocks.items()}
 
-# Example usage:
-buyers_preferences = {
-    'Buyer1': ['StockA', 'StockB', 'StockC'],
-    'Buyer2': ['StockB', 'StockA', 'StockC'],
-    'Buyer3': ['StockA', 'StockB', 'StockC']
-}
+# Example usage
+if __name__ == "__main__":
+    buyers_preferences = {
+        'Buyer1': ['StockA', 'StockB', 'StockC'],
+        'Buyer2': ['StockB', 'StockA', 'StockC'],
+        'Buyer3': ['StockA', 'StockB', 'StockC']
+    }
 
-stocks_preferences = {
-    'StockA': ['Buyer1', 'Buyer2', 'Buyer3'],
-    'StockB': ['Buyer2', 'Buyer1', 'Buyer3'],
-    'StockC': ['Buyer1', 'Buyer2', 'Buyer3']
-}
+    stocks_preferences = {
+        'StockA': ['Buyer1', 'Buyer2', 'Buyer3'],
+        'StockB': ['Buyer2', 'Buyer1', 'Buyer3'],
+        'StockC': ['Buyer1', 'Buyer2', 'Buyer3']
+    }
 
-result = stable_matching(buyers_preferences, stocks_preferences)
-print(result)
+    result = stable_stock_matching(buyers_preferences, stocks_preferences)
+    print(result)
