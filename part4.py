@@ -37,5 +37,5 @@ stocks_preferences = {
     'StockC': ['Buyer1', 'Buyer2', 'Buyer3']
 }
 
-result = stable_matching(buyers_preferences, stocks_preferences)
+result = stable_stock_matching(buyers_preferences, stocks_preferences)
 print(result)
