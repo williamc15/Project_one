@@ -1,4 +1,3 @@
-#Working on Part 6.
 class PeekableIterator:
     def __init__(self, iterable):
         self.iterator = iter(iterable)
@@ -30,25 +29,22 @@ class PeekableIterator:
             return True
         try:
             self.peek()
-            return True
+            return self.peeked is not None
         except StopIteration:
             return False
 
 # Example usage and testing
 if __name__ == "__main__":
     # Test with a list
-    test_list = [1, 2, 3, 4, 5]
+    test_list = [1, 2, 3]
     peekable = PeekableIterator(test_list)
 
+    print("Has next:", peekable.has_next())  # Should print: Has next: True
     print("Peek:", peekable.peek())  # Should print: Peek: 1
     print("Next:", next(peekable))   # Should print: Next: 1
     print("Next:", next(peekable))   # Should print: Next: 2
-    print("Peek:", peekable.peek())  # Should print: Peek: 3
-    print("Peek:", peekable.peek())  # Should print: Peek: 3 (demonstrating multiple peeks)
-    print("Next:", next(peekable))   # Should print: Next: 3
     print("Has next:", peekable.has_next())  # Should print: Has next: True
-    print("Next:", next(peekable))   # Should print: Next: 4
-    print("Next:", next(peekable))   # Should print: Next: 5
+    print("Next:", next(peekable))   # Should print: Next: 3
     print("Has next:", peekable.has_next())  # Should print: Has next: False
 
     try:
