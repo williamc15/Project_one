@@ -1,4 +1,4 @@
-def stable_matching(buyers_preferences, stocks_preferences):
+def stable_stock_matching(buyers_preferences, stocks_preferences):
     free_buyers = list(buyers_preferences.keys())
     matched_stocks = {}
     buyer_current_proposals = {buyer: 0 for buyer in free_buyers}
@@ -36,5 +36,5 @@ stocks_preferences = {
     'StockC': ['Buyer1', 'Buyer2', 'Buyer3']
 }
 
-result = stable_matching(buyers_preferences, stocks_preferences)
+result = stable_stock_matching(buyers_preferences, stocks_preferences)
 print(result)
